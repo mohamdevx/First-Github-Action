@@ -1,14 +1,11 @@
-name: Mohammad 
-
 on:
   push:
     branches: [main]
 
+jobs: # <-- should be at same level as 'on'
+  demo:
+    runs-on: ubuntu-latest
 
-  jobs:
-    demo:
-      runs-on: ubuntu-latest
-
-      steps:
-        - name: Greetings
-          run: echo "Hello from apun"
+    steps:
+      - name: Greetings
+        run: echo "Hello from apun"
